@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><p style="font-size:2em">Bem vindo a API >>RafaGets<<</p></div>
+        
+        <form method="post" action="v1/index.php">
+
+            <table style="border: black solid 2px; padding: 5px">
+                <tr>
+                    <td>acao:</td>
+                    <td><input type="text" name="acao" placeholder="ex: C " /></td>
+                </tr>
+
+                <tr>
+                    <td>tabela:</td>
+                    <td><input type="text" name="tabela" placeholder="ex: teste" /></td>
+                </tr>
+
+                <tr>
+                    <td>atributos</td>
+                    <td><input type="text" name="atributos" placeholder="ex: nome, status" /></td>
+                </tr>
+
+                <tr>
+                    <td>valores</td>
+                    <td><input type="text" name="valores" placeholder="ex: Rafael, ativo" /></td>
+                </tr>
+
+                <tr>
+                    <td>argumentos</td>
+                    <td><input type="text" name="argumentos" placeholder='ex: ss' /></td>
+                </tr>
+                
+                <tr>
+                    <td>condicao</td>
+                    <td><input type="text" name="condicao" placeholder='ex: codigo = 1' /></td>
+                </tr>
+
+                <tr>
+                    <td>ordenação:</td>
+                    <td><input type="text" name="ordenacao" placeholder="ex: ORDER BY nome DESC " /></td>
+                </tr>
+                
+
+                <tr>
+                    <td> 
+                        <input type="hidden" name="email" value="sabrina@gmail.com" >
+                        <input type="hidden" name="senha" value="123" >
+                    </td>
+                    <td><input type="submit" value="ok"> </td>
+                </tr>
+            </table>
+
+
+        </form>
+<!--
+        <br/>      
+        <hr/>
+        <b>Criar um registro</b><br/>
+        acao: C <br/>
+        tabela: teste <br/>
+        condição: nome, telefone, etc... <br/>
+        valores: "rafael", 12345, etc... 
+        <div style="border: black dashed 1px; width: 300px; padding: 5px; margin-top: 15px">
+            *obs: A condicao e os valores devem ter as messma quantidade e a mesma sequencia
+        </div>
+
+
+        <br/>      
+        <hr/>
+        <b>Ler um registro</b><br/>
+        acao: R <br/>
+        tabela: teste <br/>
+        condição: nome, telefone <br/>
+        valores: "rafael" AND, 12345 <br/>
+        ordenação: ORDER BY nome DESC 
+        <div style="border: black dashed 1px; width: 300px; padding: 5px; margin-top: 15px">
+            *obs: Sempre apos o valor, caso hája outro parametro na sequencia, usar operador "AND" ou "OR".<br/>
+            Não especificando condição e valoes, sera apresentado todos os registros.
+        </div>
+
+        <br/>      
+        <hr/>
+        <b>Atualizar um registro</b><br/>
+        acao: U <br/>
+        tabela: teste <br/>
+        condição: codigo=1 <br/>
+        valores: nome="Julia", telefone=123456789, etc... <br/>
+        <div style="border: black dashed 1px; width: 300px; padding: 5px; margin-top: 15px">
+            *obs: A condicao deve ter a chava para que se localize o objeto que sera atualizado.<br/>
+            Os valores tem que ter o padrão acima descrito, sendo nomeCampo="valorRecebido"
+        </div>
+
+        <br/>      
+        <hr/>
+        <b>Deletar um registro</b><br/>
+        acao: D <br/>
+        tabela: teste <br/>
+        condição: codigo <br/>
+        valores: 2 <br/>
+        <div style="border: black dashed 1px; width: 300px; padding: 5px; margin-top: 15px">
+            *obs: A condicao e os valores devem ter as messma quantidade e a mesma sequencia.<br/>
+            por questão de segurança não é possivel excluir toda a tabela.
+        </div>-->
+    </body>
+</html>

@@ -1,0 +1,18 @@
+#Options -Indexes 
+
+RewriteEngine On
+Redirect 301 /teste/uteis http://localhost/teste/v1/
+Redirect 301 /teste/helper http://localhost/teste/v1/
+
+#options +FollowSymLinks -MultiViews
+#RewriteEngine On
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+#
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+#RewriteRule ^(.*)$ $1.php [L]
+#
+#
+#RewriteCond %{THE_REQUEST} ^(?:GET|POST)\ /.*\.php\ HTTP.*$ [NC]
+#RewriteRule ^(.*)\.php$ http://localhost/teste/v1/ [R=301,L]
