@@ -14,23 +14,62 @@ class Util {
     /**
      * Recebe a tabela que sera manipilada
      * O costrutor cria uma instancia da classe Funcao que contem funcoes uteis.
-     * Depois elecria uma nova conexao mysqli e salva no atributo $con.
+     * Depois ele cria uma nova conexao mysqli/firebird e salva no atributo $con.
      * @param type $tabela : "usuario" : Nome da tabela que sera manipulada.
      */
     public function __construct($tabela) {
+
         // Verifica se a tabela existe no banco de dados. se sim, segue o codigo ou para o programa.
         if ((new Tabelas ())->isExist($tabela)) {
             $this->tabela = $tabela;
             $this->funcoes = new Funcao();
 
-            // Cria uma conexão;
-            $this->con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        try{
+            //cria string de conexao
+            //$str_conn="firebird:host=10.10.0.201;dbname=ERPTS_WEB.fdb";
+            //$str_conn = "firebird:dbname=\\10.10.0.201:\home\banco\ERPTS_WEB.fdb";
+
+
+            //VÁLIDA PARA LOCAL --->>>
+             $str_conn = "firebird:dbname=".DB_NAME.";host=".DB_HOST;
+             //--------
+            //cria uma nova conexao
+            $this->con = new PDO($str_conn,DB_USER, DB_PASSWORD);
+
+        }catch(PDOException $e) {
+            echo "Falha na conexão.".$e->getcode();
+            echo $e.collator_get_error_message();
+        }
+
+        $stmt = $this->con->prepare("select * from $this->tabela");
+        $stmt->execute();
+        $dados = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+        foreach ($dados as $row) {
+            echo json_encode($row);
+//            echo "{$row->nome_do_campo} <br/>";
+        }
+
+
+
+
+
+
+
+
+
+
+// Cria uma conexão;
+          //  $this->con = new firebird(DB_HOST, DB_USER, DB_PASSWORD);
+            //$this->con = ibase_connect(DB_HOST, DB_USER, DB_PASSWORD);
+
+            //$this->con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             // Verifica conexão
-            if ($this->con->connect_error) {
-                $flag['flag'] = 'CONN_FAILED';
-                //die("Connection failed: " . $conn->connect_error);
-                die(json_encode($flag));
-            }
+//            if (!$this->con) {
+//                $flag['flag'] = 'CONN_FAILED';
+//                //die("Connection failed: " . $conn->connect_error);
+//                die(json_encode($flag));
+//            }
         } else {
             $flag['flag'] = 'INVALID_TABLE';
             die(json_encode($flag));
@@ -71,8 +110,6 @@ class Util {
         fwrite($this->myfile , "   SQL: ". $sql ."\n");
         return $json;
     }
-
-    
     /*public function read($atributos, $condicao, $ordenacao, $argumentos) {
         if (empty($atributos)) {
             $atributos = "*";
@@ -146,8 +183,6 @@ class Util {
         fwrite($this->myfile , "   SQL: ". $sql ."\n");
         return $result;
     }*/
-    
-    
     /**
      * Le um registro do banco de dados e retorna um json;
      * @param string $atributos = "nome, sexo": É passado as linhas que se deseja obter com a consulta.
@@ -218,7 +253,6 @@ class Util {
         fwrite($this->myfile , "   SQL: ". $sql ."\n");
         return $result;
     }
-
     /**
      * Atualiza os dados de uma linha do banco de dados.
      * @param type $atributos = "nome, sexo"    : colunas que se deseja alterar
@@ -255,7 +289,6 @@ class Util {
         fwrite($this->myfile , "   SQL: ". $sql ."\n");
         return $json;
     }
-
     /**
      * Exclui uma linha do banco de dados.
      * @param type $atributo = "codigo" : A chave da linha que sera excluida
