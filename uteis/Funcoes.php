@@ -2,6 +2,18 @@
 
 class Funcao {
 
+    function getTypesArray($argumentos){
+        $params = str_split($argumentos);
+        foreach ($params as &$param){
+            if (strcmp($param, "s") === 0){
+                $param = PDO::PARAM_STR;
+            } elseif (strcmp($param, "i") === 0) {
+                $param = PDO::PARAM_INT;
+            }
+        }
+        return $params;
+    }
+
     /**
      * Esse metodo tem a função de trazer as quantidades de variaveis que serão manipuladas
      * @param type $param = "nome, sexo"    : Recebe os parametros que serão manipilados
@@ -10,9 +22,9 @@ class Funcao {
     function getInterrogacoes($param) {
         $qtdValores = explode(",", $param);
         foreach ($qtdValores as &$value) {
-            $value = "? ";
+            $value = "?";
         }
-        $qtdValores = implode(",", $qtdValores);
+        $qtdValores = implode(", ", $qtdValores);
         return $qtdValores;
     }
 
@@ -120,5 +132,6 @@ class Funcao {
         }        
         return $temp;            
     }
+
 
 }

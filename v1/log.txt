@@ -206,3 +206,1550 @@ Nova consulta, IP_USER: ::1{
    Argumentos: 
    Condicao: 
    Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: paciente
+   Atributos: nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT nome FROM paciente 
+   Flag-> [{"nome":"Rafael  Aparecido da Silva"}
+       -> ,{"nome":"Sabrina Macimiano da Silva"}
+       -> ,{"nome":"Simone Macimiano da Silva"}
+       -> ,{"nome":"Maria Jose Guerra da Silva"}
+       -> ,{"nome":"Sara Macimiano da Silva"}
+       -> ,{"nome":"Conrado Macimiano da Silva"}
+       -> ,{"nome":"Andreia Bento da Silva"}
+       -> ,{"nome":"Rodrigo Macian da Silva"}
+       -> ,{"nome":"Antonio Macimiano da Silva Junior"}
+       -> ,{"nome":"Maria Jose Guerra da Silva"}
+       -> ,{"nome":"Andriano Aparecido da Silva"}
+       -> ,{"nome":"Priscila Costa"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: paciente
+   Atributos: nome
+   Valores: nome
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT nome FROM paciente 
+   Flag-> [{"nome":"Rafael  Aparecido da Silva"}
+       -> ,{"nome":"Sabrina Macimiano da Silva"}
+       -> ,{"nome":"Simone Macimiano da Silva"}
+       -> ,{"nome":"Maria Jose Guerra da Silva"}
+       -> ,{"nome":"Sara Macimiano da Silva"}
+       -> ,{"nome":"Conrado Macimiano da Silva"}
+       -> ,{"nome":"Andreia Bento da Silva"}
+       -> ,{"nome":"Rodrigo Macian da Silva"}
+       -> ,{"nome":"Antonio Macimiano da Silva Junior"}
+       -> ,{"nome":"Maria Jose Guerra da Silva"}
+       -> ,{"nome":"Andriano Aparecido da Silva"}
+       -> ,{"nome":"Priscila Costa"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: pacientes
+   Atributos: nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: paciente
+   Atributos: nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT nome FROM paciente 
+   Flag-> [{"nome":"Rafael  Aparecido da Silva"}
+       -> ,{"nome":"Sabrina Macimiano da Silva"}
+       -> ,{"nome":"Simone Macimiano da Silva"}
+       -> ,{"nome":"Maria Jose Guerra da Silva"}
+       -> ,{"nome":"Sara Macimiano da Silva"}
+       -> ,{"nome":"Conrado Macimiano da Silva"}
+       -> ,{"nome":"Andreia Bento da Silva"}
+       -> ,{"nome":"Rodrigo Macian da Silva"}
+       -> ,{"nome":"Antonio Macimiano da Silva Junior"}
+       -> ,{"nome":"Maria Jose Guerra da Silva"}
+       -> ,{"nome":"Andriano Aparecido da Silva"}
+       -> ,{"nome":"Priscila Costa"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: paciente
+   Atributos: nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO paciente (nome) VALUES (:nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO paciente (nome) VALUES (:nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO paciente (nome) VALUES (:nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO paciente (nome) VALUES (:nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO paciente (nome) VALUES (:nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO paciente (nome) VALUES (:nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO paciente (nome) VALUES (:nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: paciente
+   Atributos: nome
+   Valores: rafael abdala
+   Argumentos: s
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO paciente (nome) VALUES (:nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, : nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   Flag-> null}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   Flag-> null}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   Flag-> null}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   Flag-> "eu"}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   Flag-> "eu"}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafa
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   Flag-> "eu"}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, : nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, : nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, : nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, : nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (? ,? )
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (? ,? )
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (? ,? )
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (? ,? )
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, : nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, :nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, :nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, :nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, : nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, :nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (:codigo, :nome)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafaGets
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 2, rafaGets2
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 2t, rafaGets2
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 2tra, rafaGets2
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 3, rafaGets3
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 4, jucilei
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 4trf, jucilei
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 4trf, jucilei
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 5, jucilei
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT codigo, nome FROM teste 
+   Flag-> [{"codigo":"1","0":"1","nome":"rafa","1":"rafa"}
+       -> ,{"codigo":"1","0":"1","nome":"teste","1":"teste"}
+       -> ,{"codigo":"1","0":"1","nome":" rafaGets","1":" rafaGets"}
+       -> ,{"codigo":"2","0":"2","nome":" rafaGets2","1":" rafaGets2"}
+       -> ,{"codigo":"3","0":"3","nome":" rafaGets3","1":" rafaGets3"}
+       -> ,{"codigo":"4","0":"4","nome":" jucilei","1":" jucilei"}
+       -> ,{"codigo":"5","0":"5","nome":" jucilei","1":" jucilei"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT codigo, nome FROM teste 
+   Flag-> [{"codigo":"1","0":"1","nome":"rafa","1":"rafa"}
+       -> ,{"codigo":"1","0":"1","nome":"teste","1":"teste"}
+       -> ,{"codigo":"1","0":"1","nome":" rafaGets","1":" rafaGets"}
+       -> ,{"codigo":"2","0":"2","nome":" rafaGets2","1":" rafaGets2"}
+       -> ,{"codigo":"3","0":"3","nome":" rafaGets3","1":" rafaGets3"}
+       -> ,{"codigo":"4","0":"4","nome":" jucilei","1":" jucilei"}
+       -> ,{"codigo":"5","0":"5","nome":" jucilei","1":" jucilei"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT codigo, nome FROM teste 
+   Flag-> [{"codigo":"1","0":"1","nome":"rafa","1":"rafa"}
+       -> ,{"codigo":"1","0":"1","nome":"teste","1":"teste"}
+       -> ,{"codigo":"1","0":"1","nome":" rafaGets","1":" rafaGets"}
+       -> ,{"codigo":"2","0":"2","nome":" rafaGets2","1":" rafaGets2"}
+       -> ,{"codigo":"3","0":"3","nome":" rafaGets3","1":" rafaGets3"}
+       -> ,{"codigo":"4","0":"4","nome":" jucilei","1":" jucilei"}
+       -> ,{"codigo":"5","0":"5","nome":" jucilei","1":" jucilei"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: 
+   Condicao: codigo = 4
+   Ordenacao: 
+   SQL: SELECT codigo, nome FROM teste 
+   Flag-> [{"codigo":"1","0":"1","nome":"rafa","1":"rafa"}
+       -> ,{"codigo":"1","0":"1","nome":"teste","1":"teste"}
+       -> ,{"codigo":"1","0":"1","nome":" rafaGets","1":" rafaGets"}
+       -> ,{"codigo":"2","0":"2","nome":" rafaGets2","1":" rafaGets2"}
+       -> ,{"codigo":"3","0":"3","nome":" rafaGets3","1":" rafaGets3"}
+       -> ,{"codigo":"4","0":"4","nome":" jucilei","1":" jucilei"}
+       -> ,{"codigo":"5","0":"5","nome":" jucilei","1":" jucilei"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: 
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT codigo, nome FROM teste 
+   Flag-> [{"codigo":"1","0":"1","nome":"rafa","1":"rafa"}
+       -> ,{"codigo":"1","0":"1","nome":"teste","1":"teste"}
+       -> ,{"codigo":"1","0":"1","nome":" rafaGets","1":" rafaGets"}
+       -> ,{"codigo":"2","0":"2","nome":" rafaGets2","1":" rafaGets2"}
+       -> ,{"codigo":"3","0":"3","nome":" rafaGets3","1":" rafaGets3"}
+       -> ,{"codigo":"4","0":"4","nome":" jucilei","1":" jucilei"}
+       -> ,{"codigo":"5","0":"5","nome":" jucilei","1":" jucilei"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: 
+   Condicao: codigo = 4
+   Ordenacao: 
+   SQL: SELECT codigo, nome FROM teste 
+   Flag-> [{"codigo":"1","0":"1","nome":"rafa","1":"rafa"}
+       -> ,{"codigo":"1","0":"1","nome":"teste","1":"teste"}
+       -> ,{"codigo":"1","0":"1","nome":" rafaGets","1":" rafaGets"}
+       -> ,{"codigo":"2","0":"2","nome":" rafaGets2","1":" rafaGets2"}
+       -> ,{"codigo":"3","0":"3","nome":" rafaGets3","1":" rafaGets3"}
+       -> ,{"codigo":"4","0":"4","nome":" jucilei","1":" jucilei"}
+       -> ,{"codigo":"5","0":"5","nome":" jucilei","1":" jucilei"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 4
+   Ordenacao: 
+   SQL: SELECT codigo, nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"codigo":"4","0":"4","nome":" jucilei","1":" jucilei"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 4
+   Ordenacao: 
+   SQL: SELECT codigo, nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"codigo":"4","0":"4","nome":" jucilei","1":" jucilei"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome
+   Valores: Sabrina
+   Argumentos: s
+   Condicao: codigo = 4
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome
+   Valores: Sabrina M
+   Argumentos: s
+   Condicao: codigo = 4
+   Ordenacao: 
+   SQL: UPDATE teste SET nome = ? WHERE codigo  = ?
+   Flag-> {"flag":0}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome
+   Valores: Sabrina M
+   Argumentos: si
+   Condicao: codigo = 4
+   Ordenacao: 
+   SQL: UPDATE teste SET nome = ? WHERE codigo  = ?
+   Flag-> {"flag":0}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome
+   Valores: Sabrina M silva
+   Argumentos: si
+   Condicao: codigo = 4
+   Ordenacao: 
+   SQL: UPDATE teste SET nome = ? WHERE codigo  = ?
+   Flag-> {"flag":0}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome
+   Valores: Sabrina M silva silva
+   Argumentos: si
+   Condicao: codigo = 4
+   Ordenacao: 
+   SQL: UPDATE teste SET nome = ? WHERE codigo  = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: = 0
+   Ordenacao: 
+   Flag-> {"flag":"FALTA_ARGS"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: i
+   Condicao: = 0
+   Ordenacao: 
+   Flag-> {"flag":"FALTA_ARGS"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 5
+   Ordenacao: 
+   Flag-> {"flag":"FALTA_ARGS"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 5
+   Ordenacao: 
+   Flag-> {"flag":"FALTA_ARGS"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos:  
+   Valores: 5
+   Argumentos: i
+   Condicao: 
+   Ordenacao: 
+   SQL: DELETE FROM teste WHERE   = ?
+   Flag-> {"flag":0}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos:  codigo
+   Valores: 5
+   Argumentos: i
+   Condicao: 
+   Ordenacao: 
+   SQL: DELETE FROM teste WHERE  codigo = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos:  codigo
+   Valores: 1
+   Argumentos: i
+   Condicao: 
+   Ordenacao: 
+   SQL: DELETE FROM teste WHERE  codigo = ?
+   Flag-> {"flag":3}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos:  codigo
+   Valores: 2
+   Argumentos: i
+   Condicao: 
+   Ordenacao: 
+   SQL: DELETE FROM teste WHERE  codigo = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos:  codigo
+   Valores: 3
+   Argumentos: i
+   Condicao: 
+   Ordenacao: 
+   SQL: DELETE FROM teste WHERE  codigo = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos:  codigo
+   Valores: 4
+   Argumentos: i
+   Condicao: 
+   Ordenacao: 
+   SQL: DELETE FROM teste WHERE  codigo = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: C
+   Tabela: teste
+   Atributos: codigo, nome
+   Valores: 1, rafael silva
+   Argumentos: is
+   Condicao: 
+   Ordenacao: 
+   SQL: INSERT INTO teste (codigo, nome) VALUES (?, ?)
+   Flag-> {"flag":"0"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT * FROM teste 
+   Flag-> [{"codigo":"1","0":"1","nome":" rafael silva","1":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT nome FROM teste 
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: 
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT nome FROM teste 
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT * FROM teste 
+   Flag-> [{"codigo":"1","0":"1","nome":" rafael silva","1":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT * FROM teste  WHERE codigo = ?  
+   Flag-> [{"codigo":"1","0":"1","nome":" rafael silva","1":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 2
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":"sabrina","0":"sabrina"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 2
+   Ordenacao: 
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 2
+   Ordenacao: 
+   SQL: SELECT nome FROM teste  WHERE codigo = ?  
+   Flag-> [{"nome":"sabrina","0":"sabrina"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT nome FROM teste 
+   Flag-> [{"nome":"sabrina","0":"sabrina"}
+       -> ,{"nome":" rafael silva","0":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT * FROM teste 
+   Flag-> [{"codigo":"2","0":"2","nome":"sabrina","1":"sabrina"}
+       -> ,{"codigo":"1","0":"1","nome":" rafael silva","1":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT * FROM teste 
+   Flag-> [{"codigo":"2","nome":"sabrina"}
+       -> ,{"codigo":"1","nome":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT nome FROM teste 
+   Flag-> [{"nome":"sabrina"}
+       -> ,{"nome":" rafael silva"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome, codigo
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT nome, codigo FROM teste 
+   Flag-> [{"nome":"sabrina","codigo":"2"}
+       -> ,{"nome":" rafael silva","codigo":"1"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome, codigo
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: ORDER BY nome DESC
+   SQL: SELECT nome, codigo FROM teste ORDER BY nome DESC
+   Flag-> [{"nome":"sabrina","codigo":"2"}
+       -> ,{"nome":" rafael silva","codigo":"1"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: nome, codigo
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: ORDER BY nome ASC
+   SQL: SELECT nome, codigo FROM teste ORDER BY nome ASC
+   Flag-> [{"nome":" rafael silva","codigo":"1"}
+       -> ,{"nome":"sabrina","codigo":"2"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome
+   Valores: Maria
+   Argumentos: s
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: UPDATE teste SET nome = ? WHERE codigo  = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome
+   Valores: Maria
+   Argumentos: si
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: UPDATE teste SET nome = ? WHERE codigo  = ?
+   Flag-> {"flag":0}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome
+   Valores: Mariaa
+   Argumentos: si
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: UPDATE teste SET nome = ? WHERE codigo  = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: U
+   Tabela: teste
+   Atributos: nome, codigo
+   Valores: Mariaa, 10
+   Argumentos: sii
+   Condicao: codigo = 1
+   Ordenacao: 
+   SQL: UPDATE teste SET nome = ?,  codigo = ? WHERE codigo  = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: i
+   Condicao: codigo = 10
+   Ordenacao: 
+   Flag-> {"flag":"FALTA_ARGS"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: D
+   Tabela: teste
+   Atributos: codigo
+   Valores: 10
+   Argumentos: i
+   Condicao: 
+   Ordenacao: 
+   SQL: DELETE FROM teste WHERE codigo = ?
+   Flag-> {"flag":1}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: 
+   Tabela: 
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   Flag-> {"flag":"ACCESS_DENIED"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: 
+   Tabela: 
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   Flag-> {"flag":"ACCESS_DENIED"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: 
+   Tabela: 
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   Flag-> {"flag":"ACCESS_DENIED"}
+       -> }
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: R
+   Tabela: teste
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   SQL: SELECT * FROM teste 
+   Flag-> [{"codigo":"2","nome":"sabrina"}
+       -> ]}
+}
+
+Nova consulta, IP_USER: ::1{
+   Acao: 
+   Tabela: 
+   Atributos: 
+   Valores: 
+   Argumentos: 
+   Condicao: 
+   Ordenacao: 
+   Flag-> {"flag":"ACCESS_DENIED"}
+       -> }
+}
+

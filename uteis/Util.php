@@ -4,7 +4,8 @@ include_once 'Funcoes.php';
 include_once 'Config.php';
 include_once 'MinhasTabelas.php';
 
-class Util {
+class Util
+{
 
     private $con;
     private $tabela;
@@ -14,183 +15,82 @@ class Util {
     /**
      * Recebe a tabela que sera manipilada
      * O costrutor cria uma instancia da classe Funcao que contem funcoes uteis.
-     * Depois ele cria uma nova conexao mysqli/firebird e salva no atributo $con.
+     * Depois elecria uma nova conexao mysqli e salva no atributo $con.
      * @param type $tabela : "usuario" : Nome da tabela que sera manipulada.
      */
-    public function __construct($tabela) {
-
+    public function __construct($tabela)
+    {
         // Verifica se a tabela existe no banco de dados. se sim, segue o codigo ou para o programa.
         if ((new Tabelas ())->isExist($tabela)) {
             $this->tabela = $tabela;
             $this->funcoes = new Funcao();
 
-        try{
-            //cria string de conexao
-            //$str_conn="firebird:host=10.10.0.201;dbname=ERPTS_WEB.fdb";
-            //$str_conn = "firebird:dbname=\\10.10.0.201:\home\banco\ERPTS_WEB.fdb";
-
-
-            //VÁLIDA PARA LOCAL --->>>
-             $str_conn = "firebird:dbname=".DB_NAME.";host=".DB_HOST;
-             //--------
-            //cria uma nova conexao
-            $this->con = new PDO($str_conn,DB_USER, DB_PASSWORD);
-
-        }catch(PDOException $e) {
-            echo "Falha na conexão.".$e->getcode();
-            echo $e.collator_get_error_message();
-        }
-
-        $stmt = $this->con->prepare("select * from $this->tabela");
-        $stmt->execute();
-        $dados = $stmt->fetchAll(PDO::FETCH_OBJ);
-
-        foreach ($dados as $row) {
-            echo json_encode($row);
-//            echo "{$row->nome_do_campo} <br/>";
-        }
-
-
-
-
-
-
-
-
-
-
-// Cria uma conexão;
-          //  $this->con = new firebird(DB_HOST, DB_USER, DB_PASSWORD);
-            //$this->con = ibase_connect(DB_HOST, DB_USER, DB_PASSWORD);
-
-            //$this->con = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-            // Verifica conexão
-//            if (!$this->con) {
-//                $flag['flag'] = 'CONN_FAILED';
-//                //die("Connection failed: " . $conn->connect_error);
-//                die(json_encode($flag));
-//            }
+            /**
+             * Tenta criar uma conexão com o Banco de Dados.
+             * Para mudar o tipo de banco para firebird, basta trocar DB_DSN_MYSQL por DB_DSN_FIREBIRD
+             * caso de um erro, retorna um json com o erro e para a execução.
+             */
+            try {
+                $this->con = new PDO(DB_DSN_MYSQL, DB_USER, DB_PASSWORD);
+            } catch (PDOException $exception) {
+                $flag['flag'] = 'CONN_FAILED';
+                die(json_encode($flag));
+            }
         } else {
             $flag['flag'] = 'INVALID_TABLE';
             die(json_encode($flag));
         }
-        
+
+        // abri o log para registro dos updates
         $this->myfile = fopen("log.txt", "a") or die("Falha no log!");
     }
 
     /**
      * Insere um registro no banco de dados.
-     * @param type $atributos   = "nome, idade, sexo"
-     * @param type $valores     = "rafael, 21, M"
-     * @param type $argumentos  = "sis" 
-     * @return int = json formated
+     * @param type $atributos = "nome, idade, sexo"
+     * @param type $valores = "rafael, 21, M"
+     * @param type $argumentos = "sis"
+     * @return int retorna o id do objeto inserido
      */
-    public function create($atributos, $valores, $argumentos) {
-        $qtdValores = $this->funcoes->getInterrogacoes($atributos);
+    public function create($atributos, $valores, $argumentos)
+    {
+        $json['flag'] = 0;
 
+        $qtdValores = $this->funcoes->getInterrogacoes($atributos);
         $valores = explode(",", $valores);
+        $typeValues = $this->funcoes->getTypesArray($argumentos);
 
         $sql = "INSERT INTO $this->tabela ($atributos) VALUES ($qtdValores)";
         if ($stmt = $this->con->prepare($sql)) {
-            $stmt->bind_param($argumentos, ...$valores);
-            $stmt->execute();
-
-            if ($stmt->affected_rows >= 1) {
-                $json['flag'] = $stmt->insert_id;
-            } else {
-                $json['flag'] = 0;
+            $i = 0;
+            foreach ($valores as &$valor) {
+                $stmt->bindParam($i + 1, $valor, $typeValues[$i]);
+                $i++;
             }
-        } else {
-            $json['flag'] = 0;
+            $stmt->execute();
+            $json['flag'] = $this->con->lastInsertId();
         }
 
-        $stmt->close();
-        $this->con->close();
+        $stmt = null;
+        $this->con = null;
 
-        fwrite($this->myfile , "   SQL: ". $sql ."\n");
+        fwrite($this->myfile, "   SQL: " . $sql . "\n");
         return $json;
     }
-    /*public function read($atributos, $condicao, $ordenacao, $argumentos) {
-        if (empty($atributos)) {
-            $atributos = "*";
-        }
 
-        $execute = FALSE;
-        if (empty($argumentos) && empty($condicao)) {
-            $sql = "SELECT $atributos FROM $this->tabela $ordenacao";
-            $stmt = $this->con->prepare($sql);
-            $execute = TRUE;
-        } else if (!empty($condicao)) {
-            $pos = strpos($condicao, "->");
-            if ($pos === 0) { 
-                $condicao = str_replace("->", "", $condicao);
-                $func = new Funcao();
-                $argumentos = $func->getInArgs($condicao);
-                $values = $func->getInValues($condicao);
-                $condicao = $func->getInSql($condicao);
-                
-                $sql = "SELECT $atributos FROM $this->tabela $ordenacao WHERE $condicao";       
-                //die($sql);
-            } else {
-                $func = new Funcao();
-                $values = $func->prepareCondReadValues($condicao);
-                $condicao = $func->prepareCondReadInterrogacao($condicao);
-                $condicao = " WHERE " . $condicao;
-
-                $sql = "SELECT $atributos FROM $this->tabela $condicao $ordenacao";
-            }            
-            
-            $stmt = $this->con->prepare($sql);
-            $stmt->bind_param($argumentos, ...$values);
-            //die($stmt->errno);
-            $execute = TRUE;
-            
-//            $codigo = 1;
-//            $nome = "Sabrina";
-//            $sql = "SELECT $atributos FROM $this->tabela $condicao $ordenacao";
-//            $stmt = $this->con->prepare("SELECT nome FROM adm WHERE codigo = ? OR nome = ?");
-//            $stmt->bind_param("ss", $codigo, $nome);
-        }
-
-        if ($execute === TRUE) {
-            $stmt->execute();
-
-            $meta = $stmt->result_metadata();
-
-            while ($field = $meta->fetch_field()) {
-                $params[] = &$row[$field->name];
-            }
-
-            call_user_func_array(array($stmt, 'bind_result'), $params);
-
-            while ($stmt->fetch()) {
-                foreach ($row as $key => $val) {
-                    $c[$key] = $val;
-                }
-                $result[] = $c;
-            }
-
-            $stmt->close();
-            $this->con->close();
-        }
-
-        if ($execute === FALSE) {
-            $result['flag'] = "ERROR_PREPARE";
-        } else if (empty($result)) {
-            $result['flag'] = "SEM_RESULT";
-        }
-
-        fwrite($this->myfile , "   SQL: ". $sql ."\n");
-        return $result;
-    }*/
     /**
      * Le um registro do banco de dados e retorna um json;
      * @param string $atributos = "nome, sexo": É passado as linhas que se deseja obter com a consulta.
      * @param type $condicao = ex: "cod = 1, nome = rafael" ou "" (vazio) para listar tudo;
      * @param type $ordenação = "ORDER BY nome DESC" : Qual a ordenação que a consulta terá.
-     * @return type : retorna um jsonArray;
+     * @return array
      */
-    public function read($atributos, $condicao, $ordenacao, $argumentos) {
+    public function read($atributos, $condicao, $ordenacao, $argumentos)
+    {
+        $sql = null;
+        $stmt = null;
+        $result = null;
+
         if (empty($atributos)) {
             $atributos = "*";
         }
@@ -198,7 +98,7 @@ class Util {
         $execute = FALSE;
         if (empty($argumentos)) {
             $pos = strpos($condicao, "->");
-            if ($pos === 0) { 
+            if ($pos === 0) {
                 $sql = "SELECT $atributos FROM $this->tabela $ordenacao WHERE " . str_replace("->", "", $condicao);
             } else {
                 $sql = "SELECT $atributos FROM $this->tabela $ordenacao";
@@ -209,50 +109,38 @@ class Util {
             $func = new Funcao();
             $values = $func->prepareCondReadValues($condicao);
             $condicao = $func->prepareCondReadInterrogacao($condicao);
-            $condicao = " WHERE " . $condicao;
+            $typeValues = $this->funcoes->getTypesArray($argumentos);
 
+            $condicao = " WHERE " . $condicao;
             $sql = "SELECT $atributos FROM $this->tabela $condicao $ordenacao";
             $stmt = $this->con->prepare($sql);
-            $stmt->bind_param($argumentos, ...$values);
+
+            $i = 0;
+            foreach ($values as &$valor) {
+                $stmt->bindParam($i + 1, $valor, $typeValues[$i]);
+                $i++;
+            }
             $execute = TRUE;
-//            $codigo = 1;
-//            $nome = "Sabrina";
-//            $sql = "SELECT $atributos FROM $this->tabela $condicao $ordenacao";
-//            $stmt = $this->con->prepare("SELECT nome FROM adm WHERE codigo = ? OR nome = ?");
-//            $stmt->bind_param("ss", $codigo, $nome);
         }
 
         if ($execute === TRUE) {
             $stmt->execute();
-
-            $meta = $stmt->result_metadata();
-
-            while ($field = $meta->fetch_field()) {
-                $params[] = &$row[$field->name];
-            }
-
-            call_user_func_array(array($stmt, 'bind_result'), $params);
-
-            while ($stmt->fetch()) {
-                foreach ($row as $key => $val) {
-                    $c[$key] = $val;
-                }
-                $result[] = $c;
-            }
-
-            $stmt->close();
-            $this->con->close();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } elseif ($execute === FALSE) {
+            $result['flag'] = "ERROR_PREPARE";
         }
 
-        if ($execute === FALSE) {
-            $result['flag'] = "ERROR_PREPARE";
-        } else if (empty($result)) {
+        if (empty($result)) {
             $result['flag'] = "SEM_RESULT";
         }
 
-        fwrite($this->myfile , "   SQL: ". $sql ."\n");
+        $stmt = null;
+        $this->con = null;
+
+        fwrite($this->myfile, "   SQL: " . $sql . "\n");
         return $result;
     }
+
     /**
      * Atualiza os dados de uma linha do banco de dados.
      * @param type $atributos = "nome, sexo"    : colunas que se deseja alterar
@@ -261,34 +149,34 @@ class Util {
      * @param type $condicao = "codigo = 87"    : Qual a chve da linha que sera alterada.
      * @return int : Retorna um json com o numero de linhas afetadas.
      */
-    public function update($atributos, $valores, $argumentos, $condicao) {
-        $atributos = $this->funcoes->setUpdate($atributos, $valores);
+    public function update($atributos, $valores, $argumentos, $condicao)
+    {
+        $json['flag'] = 0;
+        $atributos = $this->funcoes->setUpdate($atributos);
         $condicao = explode("=", $condicao);
 
         $valores .= ", $condicao[1]";
         $valores = explode(",", $valores);
+        $typeValues = $this->funcoes->getTypesArray($argumentos);
 
         $sql = "UPDATE $this->tabela SET $atributos WHERE $condicao[0] = ?";
         if ($stmt = $this->con->prepare($sql)) {
-            $stmt->bind_param($argumentos, ...$valores);
-            $stmt->execute();
-
-            if ($stmt->affected_rows >= 1) {
-                $json['flag'] = $stmt->affected_rows;
-            } else {
-                $json['flag'] = 0;
+            $i = 0;
+            foreach ($valores as &$valor) {
+                $stmt->bindParam($i + 1, $valor, $typeValues[$i]);
+                $i++;
             }
-        } else {
-            //echo $this->con->error;
-            $json['flag'] = 0;
+            $stmt->execute();
+            $json['flag'] = $stmt->rowCount();
         }
 
-        $stmt->close();
-        $this->con->close();
+        $stmt = null;
+        $this->con = null;
 
-        fwrite($this->myfile , "   SQL: ". $sql ."\n");
+        fwrite($this->myfile, "   SQL: " . $sql . "\n");
         return $json;
     }
+
     /**
      * Exclui uma linha do banco de dados.
      * @param type $atributo = "codigo" : A chave da linha que sera excluida
@@ -296,26 +184,23 @@ class Util {
      * @param type $argumentos = "i"    : argumen da chave que sera excluida.
      * @return int : Retorna um json com a quantidade de linhas afetadas.
      */
-    public function delete($atributo, $valor, $argumentos) {
+    public function delete($atributo, $valor, $argumentos)
+    {
+        $json['flag'] = 0;
+        $typeValues = $this->funcoes->getTypesArray($argumentos);
+
         $sql = "DELETE FROM $this->tabela WHERE $atributo = ?";
         if ($stmt = $this->con->prepare($sql)) {
-            $stmt->bind_param($argumentos, $valor);
+            $stmt->bindParam(1, $valor, $typeValues[0]);
             $stmt->execute();
-
-            if ($stmt->affected_rows >= 1) {
-                $json['flag'] = $stmt->affected_rows;
-            } else {
-                $json['flag'] = 0;
-            }
-        } else {
-            $json['flag'] = 0;
+            $json['flag'] = $stmt->rowCount();
         }
 
-        $stmt->close();
-        $this->con->close();
+        $stmt = null;
+        $this->con = null;
 
-        fwrite($this->myfile , "   SQL: ". $sql ."\n");
+        fwrite($this->myfile, "   SQL: " . $sql . "\n");
         return $json;
-    }    
+    }
 
 }

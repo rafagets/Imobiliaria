@@ -63,48 +63,55 @@ and open the template in the editor.
         </form>
         <br/>
         <hr/>
+
         <b>Criar um registro</b><br/>
         acao: C <br/>
         tabela: teste <br/>
         condição: nome, telefone, etc... <br/>
-        valores: "rafael", 12345, etc...
+        valores: rafael, 12345, etc... <br/>
+        Argumentos: si
         <div style="border: black dashed 1px; width: 300px; padding: 5px; margin-top: 15px">
-            *obs: A condicao e os valores devem ter as messma quantidade e a mesma sequencia
+            *obs: A condicao e os valores devem ter as messma quantidade e a mesma sequencia.<br>
+            Os argumentos devem ter o tipo do atributo. ex: rafael = s (Strind), 12345 = i (int)
         </div>
         <br/>
         <hr/>
+
         <b>Ler um registro</b><br/>
         acao: R <br/>
         tabela: teste <br/>
-        condição: nome, telefone <br/>
-        valores: "rafael" AND, 12345 <br/>
+        --- opcional --- <br/>
+        Atributos: nome, telefone (nome dos atributos desejados) <br/>
+        condicao: codigo = 1 <br/>
         ordenação: ORDER BY nome DESC
         <div style="border: black dashed 1px; width: 300px; padding: 5px; margin-top: 15px">
-            *obs: Sempre apos o valor, caso hája outro parametro na sequencia, usar operador "AND" ou "OR".<br/>
-            Não especificando condição e valoes, sera apresentado todos os registros.
+            *obs: Não especificando os opcionais, sera apresentado todos os registros.
         </div>
-
         <br/>
         <hr/>
+
         <b>Atualizar um registro</b><br/>
         acao: U <br/>
         tabela: teste <br/>
-        condição: codigo=1 <br/>
-        valores: nome="Julia", telefone=123456789, etc... <br/>
+        Atributos: nome, codigo, etc... <br/>
+        valores: rafael, 23, etc... <br/>
+        condicao: codigo = 1 <br/>
+        argumentos: sii (deve ter tambem o tipo do argumento da condicao no final. neste caso é i(int))
         <div style="border: black dashed 1px; width: 300px; padding: 5px; margin-top: 15px">
-            *obs: A condicao deve ter a chava para que se localize o objeto que sera atualizado.<br/>
-            Os valores tem que ter o padrão acima descrito, sendo nomeCampo="valorRecebido"
+            *obs: A condicao deve ter a chave para que se localize o objeto que sera atualizado.
         </div>
 
         <br/>
         <hr/>
+
         <b>Deletar um registro</b><br/>
         acao: D <br/>
         tabela: teste <br/>
         condição: codigo <br/>
         valores: 2 <br/>
+        argumentos: i <br/>
         <div style="border: black dashed 1px; width: 300px; padding: 5px; margin-top: 15px">
-            *obs: A condicao e os valores devem ter as messma quantidade e a mesma sequencia.<br/>
+            *obs: Só é aceito um parametro na condicao e valores.<br/>
             por questão de segurança não é possivel excluir toda a tabela.
         </div>
     </body>

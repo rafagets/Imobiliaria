@@ -1,4 +1,4 @@
-#Options -Indexes 
+Options -Indexes
 
 RewriteEngine On
 Redirect 301 /teste/uteis http://localhost/teste/v1/
